@@ -1,9 +1,18 @@
+:root{
+    --primario: #0097A7;
+    --secundario: #ffc107;
+    --blanco: #ffffffe0;
+    --oscuro: #212121;
+    --gris: #757575;
+}
+
 html{
     font-size: 62.5%
 }
 
 body{
     font-size: 16px; /* 1rem = 10px */
+    font-family: Arial, Arial, Helvetica, sans-serif;
 }
 
 .encabezado{
@@ -12,13 +21,13 @@ body{
     align-items: center;
     height: 4rem;
     padding: 1rem 2rem;
-    background-color: rgb(26, 220, 226);
+    background-color: var(--primario);
     border-bottom: 0.1rem solid #ccc;
 }
 
 .encabezado h1{
     text-align: left;
-    color: rgba(255, 255, 255, 0.877);
+    color: var(--blanco);
     font-size: 2.8rem;
 }
 
@@ -26,24 +35,24 @@ body{
     font-size: 1.5rem;
 }
 
-.encabezado nav{
+.encabezado .navegacion-principal{
     display: flex;
     gap: 2rem;
     height: 100%;
 }
 
-.encabezado nav a {
+.encabezado .navegacion-principal a {
     position: relative;
     height: 100%;
     display: inline-block;
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.877);
+    color: var(--blanco);
     padding: 1rem 2rem;
     transition: transform 0.3s ease, color 0.3s ease;
     z-index: 1; /* Asegura que el texto quede por encima del fondo */
 }
 
-.encabezado nav a::before {
+.encabezado .navegacion-principal a::before {
     content: "";
     position: absolute;
     top: 100%;
@@ -53,24 +62,43 @@ body{
     background-color: white;
     z-index: -1; /* Detrás del texto */
     transition: height 0.3s ease;
-    border-radius: 0.5rem;
 }
 
-.encabezado nav a:hover {
+.encabezado .navegacion-principal a:hover {
     transform: scale(1.2);
-    color: rgb(26, 220, 226);
+    color: var(--primario);
 }
 
-.encabezado nav a:hover::before {
+.encabezado .navegacion-principal a:hover::before {
     top: 0;
-    height: 100%;
+    height: 70%;
 }
 
-.lugar{
-    display: flex;
+.fondo-texto h2{
+    text-align: center;
+}
+
+.fondo-texto .lugar{
+    display:flex;
+    justify-content: center;
+    height: 4rem;
+}
+
+.fondo-texto .lugar p{
+    margin-top: 0.8rem;
+}
+
+.fondo-texto a{
     align-items: center;
 }
 
-.lugar p{
-    margin-bottom: 9px;
+.fondo-texto .boton-fondo {
+  background-color: var(--primario);
+  display: flex;
+  justify-content: center;     /* centra el texto dentro del botón */
+  align-items: center;         /* centra verticalmente el texto */
+  height: 4rem;
+  width: 8.5rem;
+  border-radius: 1rem;
+  margin: 2rem auto;           /* <-- esto lo centra horizontalmente */
 }
