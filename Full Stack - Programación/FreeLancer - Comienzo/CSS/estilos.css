@@ -19,14 +19,14 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 4rem;
-    padding: 1rem 2rem;
-    background-color: var(--primario);
-    border-bottom: 0.1rem solid #ccc;
+    height: 6rem;
+    padding-right: 1.2rem;
+    background-color: var(--primario)
 }
 
 .encabezado h1{
     text-align: left;
+    padding-left: 1.2rem;
     color: var(--blanco);
     font-size: 2.8rem;
 }
@@ -42,14 +42,14 @@ body{
 }
 
 .encabezado .navegacion-principal a {
-    position: relative;
-    height: 100%;
-    display: inline-block;
+    display: flex;
     text-decoration: none;
     color: var(--blanco);
     padding: 1rem 2rem;
     transition: transform 0.3s ease, color 0.3s ease;
     z-index: 1; /* Asegura que el texto quede por encima del fondo */
+    align-items: center;
+    justify-content: center;
 }
 
 .encabezado .navegacion-principal a::before {
@@ -61,17 +61,17 @@ body{
     height: 0;
     background-color: white;
     z-index: -1; /* Detrás del texto */
-    transition: height 0.3s ease;
+    transition: zoom 0.3s ease;
 }
 
 .encabezado .navegacion-principal a:hover {
-    transform: scale(1.2);
+    transform: scale(1.09);
     color: var(--primario);
 }
 
 .encabezado .navegacion-principal a:hover::before {
     top: 0;
-    height: 70%;
+    height: 100%;
 }
 
 .fondo-texto h2{
@@ -100,5 +100,81 @@ body{
   height: 4rem;
   width: 8.5rem;
   border-radius: 1rem;
-  margin: 2rem auto;           /* <-- esto lo centra horizontalmente */
+  border-style: hidden;
+  color: var(--blanco);
+  margin: 2rem auto; /* <-- esto lo centra horizontalmente */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.fondo-texto .boton-fondo:hover{
+    background-color: var(--blanco);
+    color: var(--primario)
+}
+
+@media (max-width: 1440px) {
+
+    body{
+        font-size: 18px;
+    }
+
+    .encabezado h1{
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .encabezado h1 span{
+        font-size: 1.4rem;
+    }
+
+    .encabezado .navegacion-principal{
+        display: none;
+    }
+
+    .fondo-texto h2{
+        font-size: 1.8rem;;
+    }
+
+    .fondo-texto .lugar p{
+        font-size: 1.3rem;
+        margin-top: 1.1rem;
+    }
+
+    .fondo-texto .boton-fondo{
+        height: 3rem;
+        width: 6.5rem;
+        font-size: 1.3rem;
+        margin: 0.5rem auto;
+    }
+}
+
+@media (max-width: 768px) {
+
+    body{
+        font-size: 10.5px;
+    }
+
+    .encabezado h1{
+        font-size: 2.5rem;
+    }
+
+    .encabezado h1 span{
+        font-size: 1rem;
+    }
+
+    .fondo-texto h2{
+        font-size: 1.4rem;;
+    }
+
+    .fondo-texto .lugar p{
+        font-size: 1rem;
+        margin-top: 1.3rem
+    }
+
+    .fondo-texto .boton-fondo{
+        height: 3rem;
+        width: 6.5rem;
+        font-size: 1.1rem;
+        margin: 0.8rem auto;
+    }
 }
