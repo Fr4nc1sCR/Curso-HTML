@@ -16,7 +16,12 @@
 }
 
 html{
-    font-size: 62.5%
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,*:before,*:after{
+    box-sizing: inherit;
 }
 
 body{
@@ -37,7 +42,7 @@ body{
     text-align: left;
     padding-left: 1.2rem;
     color: var(--blanco);
-    font-size: 2.8rem;
+    font-size: 3rem;
 }
 
 .encabezado h1 span{
@@ -97,25 +102,46 @@ body{
     height: 100%;
 }
 
-.fondo-texto h2{
-    text-align: center;
+.fondo-texto{
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 45rem;
 }
 
-.fondo-texto .lugar{
+.fondo-texto .contenedor-hero{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.fondo-texto .contenedor-hero h2{
+    text-align: center;
+    padding-top: 4rem;
+    font-size: 5rem;
+    color: var(--blanco);
+}
+
+.fondo-texto .contenedor-hero .lugar{
     display:flex;
     justify-content: center;
     height: 4rem;
 }
 
-.fondo-texto .lugar p{
-    margin-top: 1.3rem;
+.fondo-texto .contenedor-hero .lugar svg{
+    height: 6rem;
+    width: 6rem;;
 }
 
-.fondo-texto a{
-    align-items: center;
+.fondo-texto .contenedor-hero .lugar p{
+    margin-top: 2.5rem;
+    font-size: 2rem;
+    color: var(--blanco)
 }
 
-.fondo-texto .boton-fondo {
+.fondo-texto .contenedor-hero .boton-fondo {
   background-color: var(--primario);
   display: flex;
   justify-content: center;     /* centra el texto dentro del botón */
@@ -129,7 +155,7 @@ body{
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.fondo-texto .boton-fondo:hover{
+.fondo-texto .contenedor-hero .boton-fondo:hover{
     background-color: var(--blanco);
     color: var(--primario)
 }
@@ -217,21 +243,21 @@ body{
         background-color: rgba(255, 255, 255, 0.15);
     }
 
-    .fondo-texto h2{
+    .fondo-texto .contenedor-hero h2{
         font-size: 3.5rem;
     }
 
-    .fondo-texto .lugar svg{
+    .fondo-texto .contenedor-hero .lugar svg{
         width: 5rem;
         height: 5rem;
     }
 
-    .fondo-texto .lugar p{
+    .fondo-texto .contenedor-hero .lugar p{
         font-size: 2.5rem;
         margin-top: 1.1rem;
     }
 
-    .fondo-texto .boton-fondo{
+    .fondo-texto .contenedor-hero .boton-fondo{
         height: 3rem;
         width: 6.5rem;
         font-size: 1.3rem;
@@ -322,21 +348,21 @@ body{
         background-color: rgba(255, 255, 255, 0.15);
     }
 
-    .fondo-texto h2{
+    .fondo-texto .contenedor-hero h2{
         font-size: 1.8rem;;
     }
 
-    .fondo-texto .lugar svg{
+    .fondo-texto .contenedor-hero .lugar svg{
         width: 3rem;
         height: 3rem;
     }
 
-    .fondo-texto .lugar p{
+    .fondo-texto .contenedor-hero .lugar p{
         font-size: 1.2rem;
         margin-top: 1.2rem
     }
 
-    .fondo-texto .boton-fondo{
+    .fondo-texto .contenedor-hero .boton-fondo{
         height: 3rem;
         width: 6.5rem;
         font-size: 1.1rem;
