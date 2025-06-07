@@ -13,6 +13,7 @@
     --oscuro: #212121;
     --gris: #757575;
     --azul_oscuro: #017581;
+    --fondo: #e2eaf1;
 }
 
 html{
@@ -27,6 +28,7 @@ html{
 body{
     font-size: 16px; /* 1rem = 10px */
     font-family: Arial, Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to top, var(--fondo) 0%, var(--blanco) 200%);
 }
 
 .encabezado {
@@ -167,6 +169,7 @@ body{
   width: 9.5rem;
   border-radius: 1.8rem;
   border-style: hidden;
+  font-weight: 550;
   color: var(--blanco);
   margin: 6rem auto; /* <-- esto lo centra horizontalmente */
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -175,6 +178,81 @@ body{
 .fondo-texto .contenedor-hero .boton-fondo:hover{
     background-color: var(--blanco);
     color: var(--primario)
+}
+
+.contenido-principal{
+    background-color: var(--blanco);
+    width: 93%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    box-shadow: 5px 5px 29px 7px #000000;
+    padding: 0 4rem 4rem 4rem;
+    border-radius: 1rem;
+}
+
+.contenido-principal .contenido-titulo{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding-top: 2rem;
+}
+
+.contenido-principal .servicios{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+}
+
+.contenido-principal .servicios .servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenido-principal .servicios .servicio h3{
+    display: flex;
+    justify-content: center;
+    color: var(--primario);
+    font-weight: 400;
+}
+
+.contenido-principal .servicios .servicio p{
+    line-height: 2;
+}
+
+.contenido-principal .servicios .servicio .iconos{
+    height: 14rem;
+    width: 14rem;
+    background-color: var(--gris);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contenido-principal .servicios .servicio .iconos svg{
+    stroke: var(--secundario);
+    height: 4rem;
+    width: 4rem;
+}
+
+.contenido-principal .servicios .portafolio{
+
+}
+
+.contenido-principal .portafolio .titulo-portafolio{
+    padding-top: 3rem;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.Pie-pagina{
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    margin-bottom: 2rem;
 }
 
 /* <-- Código CSS que se refleja cuando visitamos la página desde una IPAD */
